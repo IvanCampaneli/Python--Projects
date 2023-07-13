@@ -1,0 +1,22 @@
+Planejamento:
+
+- Homepage
+- Login/Criar conta (Usuário e Autenticação)
+    - Editar perfil
+    - Username
+    - Senha
+    - Projetos
+
+
+-Projetos
+    -thumb
+    -título
+    -descrição
+    -categoria
+    -quantidade de views
+    -data de criação
+
+-Episódios
+    -diretório do projeto(deploy)
+
+-Barra de pesquisa
