@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Projetos
+{% endblock %}
+
+{% block content %}
+<div class ="py-10" >
+    <h1>Lista de Projetos</h1>
+    {% for projects in object_list %}
+    <hr>
+    <p>{{ projects }}</p>
+    <p>{{ projects.descricao }}</p>
+    <img src="{{ projects.thumb.url }}">
+    {% endfor %}
+</div>
+{% endblock %}

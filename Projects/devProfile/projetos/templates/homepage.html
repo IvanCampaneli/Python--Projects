@@ -1,10 +1,94 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %}
 Home - Profile
 {% endblock titulo %}
 
 {% block content %}
-<h1>HomePage</h1>
+<div class="min-h-screen bg-black bg-cover bg-opacity-50 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat">
+    <div class="animation-container">
+        <img src="{% static 'img/fundo.jpg' %}" class="animation" alt="">
+    </div>
+
+    <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+        <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+            Sejam bem-vindos ao meu ambiente Python! Aqui, você encontrará uma variedade de projetos nos quais utilizei diversas tecnologias para diferentes segmentos. Tudo reunido em um só lugar.
+        </h1>
+        <h3 class="text-xl md:text-xl py-5">
+            Pesquise e utilize os projetos como base como quiser.
+        </h3>
+        <h4 class="text-sm md:text-lg pb-3">
+            Quer começar? Coloque seu e-mail abaixo para acessar e/ou entrar em contato.
+        </h4>
+        <div class="w-full flex justify-center">
+            <div class="flex justify-center items-center w-11/12 md:w-10/12">
+                <form method="post" class="w-6/12 justify-center">
+                    <div class="flex flex-grow items-stretch" style="justify-content: center; color: #000; gap: 5px;">
+                        <input/>
+                    <button class="bg-blue-600 font-medium md:font-normal flex justify-center items-center py-2 px-3 md:px-0 rounded-br-sm rounded-tr-sm md:text-2xl" type="submit">
+                        <span>
+                            Acessar
+                        </span>
+                        <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                    </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Python Language.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Todos os projetos foram feitos em python, utilizando suas bibliotecas e frameworks.
+        </h5>
+    </div>
+    <div class='md:w-1/2 flex justify-center items-center'>
+        <img src="{% static 'img/py_pic.png' %}" class="w-5/12" alt="">
+    </div>
+</section>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class='md:w-1/2 flex justify-center items-center '>
+        <img src="{% static 'img/py_dj.png' %}" class="w-5/12" alt="">
+    </div>
+
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Django Framework.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Este portifólio foi feito em Django como forma de aprimoramento, mas também para networking e compartilhar meus conhecimentos.
+        </h5>
+    </div>
+</section>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Compartilhe!
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Dessa forma você compatilha conhecimentos e quem sabe me ajude a alcançar minha primeira vaga Dev.
+        </h5>
+    </div>
+    <div class='md:w-1/2 flex justify-center items-center'>
+        <img src="{% static 'img/share_pic.png' %}" class="w-5/12" alt="">
+    </div>
+</section>
+
+<footer class=" px-5 py-10 ">
+    <ul class="flex justify-between items-center">
+
+        <li>&copy; 2023</li>
+        <li> Portfólio</li>
+        <li>dev_ivan_campaneli</li>
+    </ul>
+</footer>
 {% endblock %}
 
