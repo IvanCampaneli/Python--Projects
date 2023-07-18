@@ -9,7 +9,7 @@ Projetos
     <h1>Lista de Projetos</h1>
     {% for projects in object_list %}
     <hr>
-    <p>{{ projects }}</p>
+    <a href="{% url 'projects:detailprojects' projects.pk %}"><p>{{ projects.titulo }}</p></a>
     <p>{{ projects.descricao }}</p>
     <img src="{{ projects.thumb.url }}">
     {% endfor %}

@@ -5,11 +5,29 @@ Detalhes - Projetos
 {% endblock %}
 
 {% block content %}
-<div class ="py-10" >
+<div class ="py-10">
     <h1>{{ object.titulo }}</h1>
     <hr>
     <p>{{ object }}</p>
     <p>{{ object.descricao }}</p>
-    <img src="{{ object.thumb.url }}">   
+    
+    <img src="{{ object.thumb.url }}">
+
+    <h2>Projetos</h2>
+    {% for projetos in object.projetos.all %}
+    <a href="{{ projetos.link }}">
+        <p>Projeto {{ forloop.counter }}: {{ projetos }}</p>
+    </a>
+    {% endfor %} 
+</div>
+
+<div class ="py-10">
+    {% for projetos in other_projects %}
+    <p>
+        <a href="{% url 'projects:detailprojects' projetos.pk %}">
+            {{ projetos.titulo }} 
+        </a>
+    </p>
+    {% endfor %}
 </div>
 {% endblock %}

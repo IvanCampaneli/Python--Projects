@@ -4,7 +4,7 @@
 from django.urls import path, include
 from .views import Homepage, Projects, Detailprojects
 
-app_name = 'projetos'
+app_name = 'projects'
 
 urlpatterns = [
     path('', Homepage.as_view(), name='homepage'),

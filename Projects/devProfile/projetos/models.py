@@ -13,7 +13,7 @@ LISTA_CATEGORIAS = (
 )
 
 class Profile(models.Model):
-    titulo = models.CharField(max_length=100)
+    titulo = models.CharField(max_length=300)
     thumb = models.ImageField(upload_to='thumb_projetos')
     descricao = models.TextField()
     categoria = models.CharField(max_length=20, choices=LISTA_CATEGORIAS)
@@ -22,3 +22,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+# create your projects
+
+class Project(models.Model):
+    projetos = models.ForeignKey("Profile", related_name="projetos", on_delete=models.CASCADE)
+    titulo = models.CharField(max_length=300)
+    link = models.URLField()
+
+    def __str__(self):
+        return self.projetos.titulo + " - " + self.titulo
