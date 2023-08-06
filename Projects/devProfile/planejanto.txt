@@ -1,3 +1,5 @@
+Em progresso...
+
 Planejamento:
 
 - Homepage
@@ -16,7 +18,6 @@ Planejamento:
     -quantidade de views
     -data de criação
 
--Episódios
-    -diretório do projeto(deploy)
 
+-Diretório do projeto(deploy)
 -Barra de pesquisa
